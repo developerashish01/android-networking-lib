@@ -111,6 +111,37 @@ Support Multipart
     }
 ```
 
+## File Uploading
+
+```
+ HashMap<String, String> headers = new HashMap<>();
+ headers.put("device_id", "<NO-DEVICE-ID>");
+        
+ final HashMap<String, String> param = new HashMap<>();
+ param.put("userId", "1");
+        
+ MultipartRequest request = new MultipartRequest(activity);
+ request.setHeader(headers);
+ request.setRequestParam(param);
+        
+ File filePath = new File(Environment.getExternalStorageDirectory().getPath(), "/test.jpg");
+ request.addImage("key", filePath.getAbsolutePath(), filePath.getName());
+ request.execute(AppUrl.URL);
+ request.setListener(new UploadListener() {
+       @Override
+            public void onSuccess(int requestCode, int responseCode, String response) {
+
+            }
+
+            @Override
+            public void onFailed() {
+
+            }
+        });
+
+```
+
+
 ## License
 
 This library is licensed under the [Apache Software License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0).
