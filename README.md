@@ -12,24 +12,26 @@ Support Multipart
 
 # Sample Get Request
 ```
-        HashMap<String, String> headers = new HashMap<>();
-        headers.put("device_id", "<NO-DEVICE-ID>");
-        HashMap<String, String> param = new HashMap<>();
-        param.put("userId", "1");
-        sendDataOnServer(headers, param, Method.GET, AppUrl.URL, true, GET_REQ);
+  HashMap<String, String> headers = new HashMap<>();
+  headers.put("device_id", "<NO-DEVICE-ID>");
+  HashMap<String, String> param = new HashMap<>();
+  param.put("userId", "1");
+  sendDataOnServer(headers, param, Method.GET, AppUrl.URL, true, GET_REQ);
 ```
 # Sample Post Request
 ```
-       HashMap<String, String> headers = new HashMap<>();
-       headers.put("device_id", "<NO-DEVICE-ID>");
-       HashMap<String, String> param = new HashMap<>();
-       param.put("userId", "1");
-       sendDataOnServer(headers, param, Method.POST, AppUrl.URL, true, POST_REQ);
+  HashMap<String, String> headers = new HashMap<>();
+  headers.put("device_id", "<NO-DEVICE-ID>");
+  HashMap<String, String> param = new HashMap<>();
+  param.put("userId", "1");
+  sendDataOnServer(headers, param, Method.POST, AppUrl.URL, true, POST_REQ);
 ```
 # Hit Request
 ```
-        private void sendDataOnServer(HashMap<String, String> headers, final HashMap<String, String> param, int method, final String url,
+  private void sendDataOnServer(HashMap<String, String> headers, final HashMap<String, String> param, int method, final String url,
                                   boolean showProgressDialog, int requestCode) {
+
+
         WebServiceExecutor executor = new WebServiceExecutor(activity);
         executor.setRequestParam(param);
         executor.setHeader(headers);
@@ -62,8 +64,9 @@ Support Multipart
 
 # Advance Getting Cached Response
 ```
-        private void sendDataOnServer(HashMap<String, String> headers, final HashMap<String, String> param, int method, final String url,
+  private void sendDataOnServer(HashMap<String, String> headers, final HashMap<String, String> param, int method, final String url,
                                   boolean showProgressDialog, int requestCode) {
+
 
         WebServiceExecutor executor = new WebServiceExecutor(activity);
         executor.setRequestParam(param);
